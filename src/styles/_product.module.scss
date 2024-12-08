@@ -1,0 +1,91 @@
+@use './globals.module' as variables;
+
+.product-page {
+    max-width: 980px;
+    margin: 0 auto;
+    
+    .product-list {
+        display: grid;
+        gap: .4em;
+
+        .card-product {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            text-align: center;
+            transition: box-shadow 0.3s;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+
+            > div {
+                display: flex;
+                text-align: left;
+                .btn {
+                    margin-top: 20px;
+                }
+                > div {
+                    width: -webkit-fill-available;
+                }
+            }
+            &:hover {
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+        
+            .product-image {
+                width: auto;
+                height: 150px;
+                max-height: 150px;
+            }
+        
+            .product-title {
+                margin: 0 0 5px;
+                font-size: 1.1em;
+                font-weight: 500;
+                max-width: 400px;
+            }
+        
+            .product-price {
+                color: #007bff; 
+                font-weight: bold;
+                margin: 0;
+            }
+        }
+    }
+    &.detail {
+        background-color: variables.$white;
+        border-radius: 10px;
+        padding: 2em;
+        margin: 2em auto;
+    }
+    @media only screen and (max-width: 480px) {
+        margin: 10px;
+        .product-list {
+            .card-product, > .card-product > div {
+                display: block;
+            }
+            .product-image {
+                max-height: none !important;
+            }
+        }
+    }
+}
+
+.breadcrumb {
+    max-width: 980px;
+    margin: 10px auto;
+    font-size: 14px;
+    text-align: left;
+    color: #575757;
+    font-weight: 400;
+    .breadcrumb-item {
+        display: inline;
+
+        &.breadcrumb-separator {
+            margin: 0 5px;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        margin: 10px;
+    }
+}

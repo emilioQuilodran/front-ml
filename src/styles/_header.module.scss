@@ -1,0 +1,62 @@
+@use './globals.module' as variables;
+
+.header {
+    background-color: variables.$yellow;
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+    gap: 1em;
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.input-with-icon {
+    position: relative;
+    width: 80vw;
+}
+
+.input-field {
+    padding: 10px 40px 10px 10px;
+    border: 1px solid #000000;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 98.3%;
+    &:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+}
+
+.input-icon {
+    position: absolute;
+    right: 10px; 
+    top: 50%;
+    right: 1px;
+    transform: translateY(-50%);
+    color: #616161;
+    background-color: #aaa;
+    padding: 5px;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        .input-with-icon {
+            width: 50vw;
+            .input-field {
+                width: 90.7%;
+            }
+        }
+    }
+}
