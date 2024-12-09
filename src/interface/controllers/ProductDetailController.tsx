@@ -44,10 +44,14 @@ const ProductDetailController: React.FC<Props> = ({ getProductDetails }) => {
                     />
                 </div>
             </div>
-            <div>
-                <h2>Descripcion del producto: </h2>
-                <p className='description'>{product?.description}</p>
-            </div>
+            {
+                product?.description && (
+                    <div>
+                        <h2>Descripcion del producto: </h2>
+                        <p className='description'>{product?.description}</p>
+                    </div>
+                )
+            }
         </section>
         
     );
