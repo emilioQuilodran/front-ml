@@ -9,6 +9,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "isolatedModules": true,
+    "esModuleInterop": true,
     "strict": true, 
     "jsx": "react-jsx",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -16,6 +17,7 @@
     "forceConsistentCasingInFileNames": true,
     "allowImportingTsExtensions": true,
     "noEmit": true,
+    "types": ["jest", "@testing-library/jest-dom"]
   },
   "include": ["./src"]
 }
